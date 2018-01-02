@@ -1,16 +1,71 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13756"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Zazen_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <button width="1" alignment="left" title="40" id="WXY-Ba-dsE">
+                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" type="boldSystem" pointSize="35"/>
+                            <connections>
+                                <action selector="onFortyMinuteStartPress" destination="AgC-eL-Hgc" id="xKM-5q-mX3"/>
+                            </connections>
+                        </button>
+                        <separator alignment="left" id="63B-k0-GW9">
+                            <color key="color" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </separator>
+                        <button width="1" alignment="left" title="30" id="QiF-8O-Rbx">
+                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" type="boldSystem" pointSize="35"/>
+                            <connections>
+                                <action selector="onThirtyMinuteStartPress" destination="AgC-eL-Hgc" id="uXU-Il-kd0"/>
+                            </connections>
+                        </button>
+                        <separator alignment="left" id="9e6-zV-FWx">
+                            <color key="color" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </separator>
+                        <button width="1" alignment="left" title="10" id="MSu-5i-hMu">
+                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" type="boldSystem" pointSize="35"/>
+                            <connections>
+                                <action selector="onTenMinutesStartPress" destination="AgC-eL-Hgc" id="mJT-bU-R89"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--TimerInterfaceController-->
+        <scene sceneID="9HS-AQ-rJS">
+            <objects>
+                <controller identifier="TimerInterfaceController" id="vjx-Et-shn" customClass="TimerInterfaceController" customModule="Zazen_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <timer width="1" height="1" alignment="center" verticalAlignment="center" textAlignment="center" id="fBz-dv-Dif">
+                            <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" type="boldSystem" pointSize="47"/>
+                            <calendarUnit key="units" minute="YES" second="YES"/>
+                        </timer>
+                    </items>
+                    <connections>
+                        <outlet property="_timerControl" destination="fBz-dv-Dif" id="b8u-Qo-V4B"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="521" y="343"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -31,9 +86,9 @@
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="Zazen_WatchKit_App" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="468" y="643"/>
+            <point key="canvasLocation" x="527" y="643"/>
         </scene>
     </scenes>
 </document>
