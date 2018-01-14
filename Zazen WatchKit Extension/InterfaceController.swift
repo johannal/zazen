@@ -9,6 +9,7 @@
 import WatchKit
 import Foundation
 
+var _currentSession : Session?
 
 class InterfaceController: WKInterfaceController {
 
@@ -16,7 +17,7 @@ class InterfaceController: WKInterfaceController {
         
         NSLog("onFortyMinuteStartPress");
         
-        startSession(duration: 40.0 * 60);
+        startSession(duration: 40 * 60);
     
     }
     
@@ -24,27 +25,26 @@ class InterfaceController: WKInterfaceController {
         
         NSLog("onThirtyMinuteStartPress");
         
-        startSession(duration: 30.0 * 60);
+        startSession(duration: 30 * 60);
     }
     
     @IBAction func onTenMinutesStartPress() {
         
         NSLog("onTenMinutesStartPress");
         
-        startSession(duration: 10.0 * 60);
+        startSession(duration: 10 * 60);
     }
     
-    func startSession(duration: Double) {
+    func startSession(duration: Int) {
+
+        _currentSession = Session(duration: duration);
         
-        let session = Session(duration: duration)
-        
-        self.presentController(withName: "TimerInterfaceController", context: session as AnyObject)
+        self.presentController(withName: "TimerInterfaceController",
+                               context: _currentSession as AnyObject)
     }
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
-        // Configure interface objects here.
     }
     
     override func willActivate() {

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE24023B1FFC961A008679C4 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE24023A1FFC961A008679C4 /* Session.swift */; };
+		BE24023D1FFC965F008679C4 /* TimerInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE24023C1FFC965F008679C4 /* TimerInterfaceController.swift */; };
 		BE2E81ED1FF44A7B00D104AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E81EC1FF44A7B00D104AC /* AppDelegate.swift */; };
 		BE2E81EF1FF44A7B00D104AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E81EE1FF44A7B00D104AC /* ViewController.swift */; };
 		BE2E81F21FF44A7B00D104AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE2E81F01FF44A7B00D104AC /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 		BE2E82121FF44A7B00D104AC /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E82111FF44A7B00D104AC /* ExtensionDelegate.swift */; };
 		BE2E82141FF44A7B00D104AC /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E82131FF44A7B00D104AC /* NotificationController.swift */; };
 		BE2E82161FF44A7B00D104AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE2E82151FF44A7B00D104AC /* Assets.xcassets */; };
+		BE81B26F2001B85500274FA1 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE81B26E2001B85500274FA1 /* HealthKit.framework */; };
+		BE8BB21F1FFDCC4600B2E113 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE8BB21E1FFDCC4600B2E113 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +69,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BE24023A1FFC961A008679C4 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		BE24023C1FFC965F008679C4 /* TimerInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerInterfaceController.swift; sourceTree = "<group>"; };
 		BE2E81E91FF44A7B00D104AC /* Zazen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zazen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE2E81EC1FF44A7B00D104AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE2E81EE1FF44A7B00D104AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +89,10 @@
 		BE2E82151FF44A7B00D104AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE2E82171FF44A7B00D104AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE2E82181FF44A7B00D104AC /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		BE81B26D2001B85500274FA1 /* Zazen.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Zazen.entitlements; sourceTree = "<group>"; };
+		BE81B26E2001B85500274FA1 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		BE8BB21E1FFDCC4600B2E113 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		BE8BB2201FFDCC4700B2E113 /* Zazen WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Zazen WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE81B26F2001B85500274FA1 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE8BB21F1FFDCC4600B2E113 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +122,7 @@
 				BE2E81FF1FF44A7B00D104AC /* Zazen WatchKit App */,
 				BE2E820E1FF44A7B00D104AC /* Zazen WatchKit Extension */,
 				BE2E81EA1FF44A7B00D104AC /* Products */,
+				BE8BB21D1FFDCC4600B2E113 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,6 +139,7 @@
 		BE2E81EB1FF44A7B00D104AC /* Zazen */ = {
 			isa = PBXGroup;
 			children = (
+				BE81B26D2001B85500274FA1 /* Zazen.entitlements */,
 				BE2E81EC1FF44A7B00D104AC /* AppDelegate.swift */,
 				BE2E81EE1FF44A7B00D104AC /* ViewController.swift */,
 				BE2E81F01FF44A7B00D104AC /* Main.storyboard */,
@@ -149,6 +163,9 @@
 		BE2E820E1FF44A7B00D104AC /* Zazen WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				BE8BB2201FFDCC4700B2E113 /* Zazen WatchKit Extension.entitlements */,
+				BE24023C1FFC965F008679C4 /* TimerInterfaceController.swift */,
+				BE24023A1FFC961A008679C4 /* Session.swift */,
 				BE2E820F1FF44A7B00D104AC /* InterfaceController.swift */,
 				BE2E82111FF44A7B00D104AC /* ExtensionDelegate.swift */,
 				BE2E82131FF44A7B00D104AC /* NotificationController.swift */,
@@ -157,6 +174,15 @@
 				BE2E82181FF44A7B00D104AC /* PushNotificationPayload.apns */,
 			);
 			path = "Zazen WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		BE8BB21D1FFDCC4600B2E113 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE81B26E2001B85500274FA1 /* HealthKit.framework */,
+				BE8BB21E1FFDCC4600B2E113 /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +254,11 @@
 					BE2E81E81FF44A7B00D104AC = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 					BE2E81FA1FF44A7B00D104AC = {
 						CreatedOnToolsVersion = 9.2;
@@ -236,6 +267,11 @@
 					BE2E82091FF44A7B00D104AC = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.HealthKit.watchos = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -303,8 +339,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE24023B1FFC961A008679C4 /* Session.swift in Sources */,
 				BE2E82141FF44A7B00D104AC /* NotificationController.swift in Sources */,
 				BE2E82121FF44A7B00D104AC /* ExtensionDelegate.swift in Sources */,
+				BE24023D1FFC965F008679C4 /* TimerInterfaceController.swift in Sources */,
 				BE2E82101FF44A7B00D104AC /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,7 +438,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -451,7 +489,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -463,11 +501,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "Zazen WatchKit Extension/Zazen WatchKit Extension.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J379DSB66R;
 				INFOPLIST_FILE = "Zazen WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.zenbf.Zazen.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = org.zenbf.Zazen.watchkit.ext;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -480,11 +523,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "Zazen WatchKit Extension/Zazen WatchKit Extension.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J379DSB66R;
 				INFOPLIST_FILE = "Zazen WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.zenbf.Zazen.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = org.zenbf.Zazen.watchkit.ext;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -498,11 +545,15 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J379DSB66R;
 				IBSC_MODULE = Zazen_WatchKit_Extension;
 				INFOPLIST_FILE = "Zazen WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = org.zenbf.Zazen.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = org.zenbf.Zazen.watchkit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -516,11 +567,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J379DSB66R;
 				IBSC_MODULE = Zazen_WatchKit_Extension;
 				INFOPLIST_FILE = "Zazen WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = org.zenbf.Zazen.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = org.zenbf.Zazen.watchkit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -533,11 +587,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Zazen/Zazen.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J379DSB66R;
 				INFOPLIST_FILE = Zazen/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.zenbf.Zazen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -547,11 +606,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Zazen/Zazen.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J379DSB66R;
 				INFOPLIST_FILE = Zazen/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.zenbf.Zazen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

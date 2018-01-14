@@ -7,15 +7,28 @@
 //
 
 import UIKit
+import HealthKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let _healthStore = HKHealthStore()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let hkTypesToRead = Set([HKObjectType.categoryType(forIdentifier: .mindfulSession)!])
+        let hkTypesToWrite = Set([HKSampleType.categoryType(forIdentifier: .mindfulSession)!])
+        
+        _healthStore.requestAuthorization(
+            toShare: hkTypesToWrite,
+            read: hkTypesToRead,
+            completion: { (success, error) in
+                print("permissions");
+        })
+        
+        
         return true
     }
 
@@ -39,6 +52,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func applicationShouldRequestHealthAuthorization(_ application: UIApplication) {
+        _healthStore.handleAuthorizationForExtension { success, error in
+            print(success)
+        }
     }
 
 

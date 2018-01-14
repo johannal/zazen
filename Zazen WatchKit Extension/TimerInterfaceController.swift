@@ -9,10 +9,14 @@
 
 import WatchKit
 import Foundation
+import HealthKit
 
 class TimerInterfaceController: WKInterfaceController {
 
     @IBOutlet var _timerControl: WKInterfaceTimer!
+    
+    var _timer: Timer!
+    var _session: Session!;
     
     override func awake(withContext context: Any?) {
         
@@ -20,10 +24,16 @@ class TimerInterfaceController: WKInterfaceController {
         
         if(context != nil) {
         
-            let session = context as! Session
-        
-            _timerControl.setDate(Date(timeIntervalSinceNow: session.duration ))
-        
+            _session = context as! Session
+            
+            if(_session.workoutSession?.state == HKWorkoutSessionState.notStarted) {
+            
+                _session.start();
+                
+            }
+            
+            _timerControl.setDate(_session.endDate!)
+            
             _timerControl.start()
             
         }
@@ -34,10 +44,15 @@ class TimerInterfaceController: WKInterfaceController {
         
         super.willActivate()
     }
-
+    
     override func didDeactivate() {
-        
+        //todo: this is getting fired N times
+        //and there are two session objects now.
+        //need to have a singleton session and check here.
         super.didDeactivate()
+        
+        _session.end();
+
     }
 
 }
