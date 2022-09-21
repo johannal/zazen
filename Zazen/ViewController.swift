@@ -2,8 +2,7 @@
 //  ViewController.swift
 //  Zazen
 //
-//  Created by Douglas Purdy on 12/27/17.
-//  Copyright © 2017 zenbf. All rights reserved.
+//  Created by Jo Lynn on 09/21/22.
 //
 
 import UIKit
@@ -13,9 +12,7 @@ class ZazenController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
  
-        
     }
 
     override func didReceiveMemoryWarning() {

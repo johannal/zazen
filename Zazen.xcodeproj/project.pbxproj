@@ -253,6 +253,7 @@
 				TargetAttributes = {
 					BE2E81E81FF44A7B00D104AC = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = "";
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.HealthKit = {
@@ -266,6 +267,7 @@
 					};
 					BE2E82091FF44A7B00D104AC = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = "";
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.HealthKit.watchos = {
