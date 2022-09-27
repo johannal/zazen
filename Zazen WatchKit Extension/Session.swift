@@ -32,7 +32,7 @@ class Session : NSObject, HKWorkoutSessionDelegate {
         configuration.locationType = .unknown
         
         do {
-            // do something
+            // do something here
             workoutSession = try HKWorkoutSession(configuration: configuration)
             workoutSession!.delegate = self
             
